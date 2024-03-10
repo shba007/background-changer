@@ -6,7 +6,7 @@ function ColorPalate({ setSelectedColor, className = '' }: { setSelectedColor: (
 
 	return (
 		<div className={`flex justify-center items-center fixed w-screen h-screen bg-black/40 ${className}`}>
-			<dialog open className="rounded-md py-4 w-fit aspect-[5/3] bg-slate-600 text-white">
+			<dialog open className="rounded-md py-4 w-fit max-w-80 md:max-w-full aspect-[3/4] md:aspect-[5/3] bg-slate-600 text-white">
 				<div className="flex flex-col gap-2 p-4 h-full overflow-auto">
 					{colors.map((color) => (
 						<div key={color} className="">

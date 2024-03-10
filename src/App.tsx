@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ColorPalate from './Components/ColorPalate';
+import ColorPalate from './components/ColorPalate';
 
 function App() {
 	const [currentColor, setCurrentColor] = useState<[number, number, number]>([14, 165, 233]);
