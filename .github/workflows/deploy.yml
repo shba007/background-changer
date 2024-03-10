@@ -31,6 +31,8 @@ jobs:
           path: ./dist
 
   deploy:
+    needs: build
+
     permissions:
       pages: write      # to deploy to Pages
       id-token: write 
