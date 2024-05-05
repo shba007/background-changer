@@ -11,4 +11,4 @@
   </a>
 </p>
 
-![Landing](public/previews/hero.webp)
+![Landing](public/previews/landing.webp)
