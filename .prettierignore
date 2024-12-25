@@ -1,15 +1,13 @@
-# Git/Github
-.git
-.github
-.gitignore
-
 # Astro dev/build outputs
+.astro
 dist
-dist-ssr
-*.local
 
 # Node dependencies
 node_modules
+
+# Package Manager
+package.json
+pnpm-lock.yaml
 
 # Logs
 logs

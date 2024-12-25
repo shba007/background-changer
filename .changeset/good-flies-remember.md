@@ -1,5 +1,5 @@
 ---
-"background-changer": patch
+'background-changer': patch
 ---
 
 chore: add changesets to manage versioning and publishing

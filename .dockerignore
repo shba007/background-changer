@@ -23,3 +23,7 @@ logs
 # Env files
 .env*
 !.env.example
+
+# Dockerfile
+.dockerignore
+Dockerfile

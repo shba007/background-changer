@@ -1,0 +1,9 @@
+name: 'background-changer'
+services:
+  web:
+    build: .
+    # image: 'ghcr.io/shba007/background-changer:latest'
+    env_file:
+      - .env.prod
+    ports:
+      - 3100:8080
