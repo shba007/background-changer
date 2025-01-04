@@ -1,48 +1,24 @@
-import tailwindColors from 'tailwindcss/colors';
+import tailwindColors from 'tailwindcss/colors'
 
-function ColorPalate({
-  setSelectedColor,
-  className = '',
-}: {
-  setSelectedColor: (color: string) => void;
-  className?: string;
-}) {
-  const colorsToRemove = [
-    'inherit',
-    'current',
-    'transparent',
-    'black',
-    'white',
-    'blueGray',
-    'coolGray',
-    'lightBlue',
-    'trueGray',
-    'warmGray',
-  ];
-  const colors = Object.keys(tailwindColors).filter(
-    (color) => !colorsToRemove.includes(color)
-  );
+function ColorPalate({ setSelectedColor, className = '' }: { setSelectedColor: (color: string) => void; className?: string }) {
+  const colorsToRemove = ['inherit', 'current', 'transparent', 'black', 'white', 'blueGray', 'coolGray', 'lightBlue', 'trueGray', 'warmGray']
+  const colors = Object.keys(tailwindColors).filter((color) => !colorsToRemove.includes(color))
 
   return (
-    <div
-      className={`flex justify-center items-center fixed w-screen h-screen bg-black/40 ${className}`}
-    >
-      <dialog
-        open
-        className="rounded-md py-4 w-fit max-w-80 md:max-w-full aspect-[3/4] md:aspect-[5/3] bg-slate-600 text-white"
-      >
-        <div className="flex flex-col gap-2 p-4 h-full overflow-auto">
+    <div className={`fixed flex h-screen w-screen items-center justify-center bg-black/40 ${className}`}>
+      <dialog open className="aspect-[3/4] w-fit max-w-80 rounded-md bg-slate-600 py-4 text-white md:aspect-[5/3] md:max-w-full">
+        <div className="flex h-full flex-col gap-2 overflow-auto p-4">
           {colors.map((color) => (
             <div key={color} className="">
-              <span className="capitalize text-lg font-medium">{color}</span>
-              <ul className="flex gap-2 mt-4">
+              <span className="text-lg font-medium capitalize">{color}</span>
+              <ul className="mt-4 flex gap-2">
                 {
                   // @ts-expect-error color map exists
                   Object.keys(tailwindColors[color]).map((shade) => (
                     <button
                       // @ts-expect-error shade map exists
                       key={tailwindColors[color][shade]}
-                      className="inline-block rounded-lg size-14 focus:outline focus:outline-2 focus:outline-slate-950 focus:outline-offset-1"
+                      className="inline-block size-14 rounded-lg focus:outline focus:outline-2 focus:outline-offset-1 focus:outline-slate-950"
                       // @ts-expect-error shade map exists
                       style={{ backgroundColor: tailwindColors[color][shade] }}
                       onClick={() =>
@@ -58,7 +34,7 @@ function ColorPalate({
         </div>
       </dialog>
     </div>
-  );
+  )
 }
 
-export default ColorPalate;
+export default ColorPalate

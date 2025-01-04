@@ -3,7 +3,7 @@
 .github
 .gitignore
 
-# Astro dev/build outputs
+# React dev/build outputs
 dist
 dist-ssr
 *.local
@@ -19,6 +19,9 @@ logs
 .DS_Store
 .fleet
 .idea
+
+# Testing
+coverage
 
 # Env files
 .env*

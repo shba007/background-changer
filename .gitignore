@@ -1,9 +1,4 @@
-# Git/Github
-.git
-.github
-.gitignore
-
-# Astro dev/build outputs
+# React dev/build outputs
 dist
 dist-ssr
 *.local
@@ -14,6 +9,9 @@ node_modules
 # Logs
 logs
 *.log
+
+# Testing
+coverage
 
 # Misc
 .DS_Store
